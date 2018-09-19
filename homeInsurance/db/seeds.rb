@@ -5,3 +5,5 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+noInsurer = Insurer.create({name: "None", slogan: "I'll keep things safe myself", location: "None"})
