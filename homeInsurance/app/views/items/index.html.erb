@@ -13,11 +13,15 @@
     <% @items.each do |item| %>
       <tr>
         <td class="first"><%= link_to item.name, item %></td>
-        <td>£<%= item.value %></td>
+        <td>£<%= "%.2f" % item.value %></td>
         <td><%= link_to 'Edit', edit_item_path(item) %></td>
         <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
+    <thead>
+      <td>Total</td>
+      <td>£<%= "%.2f" % @items.inject(0){|total,item| total + item.value} %></td>
+    </thead>
   </tbody>
 </table>
 

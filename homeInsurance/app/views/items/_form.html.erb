@@ -23,10 +23,10 @@
 
   <div class="field">
     <%= f.label :value %> (£)<br />
-    <%= f.number_field :value, autocomplete: "value" %>
+    <%= f.number_field :value, class: :text_field, step: 0.01, autocomplete: "value" %>
   </div>
 
-  <div class="field">
+  <div class="field hidden">
     <%= f.label :user %><br />
     <%= f.collection_select :user_id, User.all, :id, :last_name %>
   </div>

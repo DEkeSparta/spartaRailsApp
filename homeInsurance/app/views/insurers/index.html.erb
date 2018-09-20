@@ -12,6 +12,7 @@
       <tr>
         <td class="first"><%= link_to insurer.name, insurer %></td>
         <td>Total clients: <%= insurer.users.length %></td>
+        <td>£<%= "%.2f" % insurer.total %>
         <td><%= link_to 'Edit', edit_insurer_path(insurer) %></td>
         <% if insurer.users.length == 0 %>
           <td><%= link_to 'Destroy', insurer, method: :delete, data: { confirm: 'Are you sure?' } %></td>

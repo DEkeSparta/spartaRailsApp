@@ -13,23 +13,30 @@
  *= require_tree .
  *= require_self
  */
+html{
+  background-color: #333;
+}
 
 body{
   font-family: sans-serif;
   color:#eee;
   background-color:#222;
-  margin:30px;
-  max-width:1000px;
+  margin:auto;
+  padding:30px;
+  min-height:80vh;
+  min-width:750px;
+  max-width:1400px;
   width:80%;
+  box-sizing: border-box;
 }
 
 td{
   vertical-align: text-bottom;
-  padding:20px 20px 20px 0;
+  padding:10px 50px 10px 0;
 }
 td.first{
   font-size: 1.5em;
-  width:50%;
+  min-width: 150px;
   font-weight: bold;
 }
 
@@ -40,16 +47,33 @@ td.first{
 :visited{
   color:#bdb;
 }
-:link:hover{
+td :link:hover{
   text-shadow: 1px 1px 5px #fff;
 }
 
+thead{
+  text-decoration: overline underline #444;
+  font-weight: bold;
+}
+
+nav{
+  border-bottom:#444 solid 5px;
+}
 nav a{
+  display:inline-block;
   padding:10px;
-  background-color:#333;
+  background-color:#232323;
+  margin:0;
 }
 nav a:hover{
   background-color: #888;
+  text-shadow: 1px 1px 5px #222;
+}
+
+.notice, .alert{
+  padding:0;
+  margin:0;
+  text-align: center;
 }
 
 div.field {
@@ -61,4 +85,8 @@ div.divider{
   border-top: 5px double #ec9;
   border-bottom: 5px double #ec9;
   border-radius:3px;
+}
+
+.hidden{
+  display: none;
 }
