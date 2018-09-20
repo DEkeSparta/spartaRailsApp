@@ -1,0 +1,92 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+html{
+  background-color: #333;
+}
+
+body{
+  font-family: sans-serif;
+  color:#eee;
+  background-color:#222;
+  margin:auto;
+  padding:30px;
+  min-height:80vh;
+  min-width:750px;
+  max-width:1400px;
+  width:80%;
+  box-sizing: border-box;
+}
+
+td{
+  vertical-align: text-bottom;
+  padding:10px 50px 10px 0;
+}
+td.first{
+  font-size: 1.5em;
+  min-width: 150px;
+  font-weight: bold;
+}
+
+:link{
+  color:#bbd;
+  text-decoration: none;
+}
+:visited{
+  color:#bdb;
+}
+td :link:hover{
+  text-shadow: 1px 1px 5px #fff;
+}
+
+thead{
+  text-decoration: overline underline #444;
+  font-weight: bold;
+}
+
+nav{
+  border-bottom:#444 solid 5px;
+}
+nav a{
+  display:inline-block;
+  padding:10px;
+  background-color:#232323;
+  margin:0;
+}
+nav a:hover{
+  background-color: #888;
+  text-shadow: 1px 1px 5px #222;
+}
+
+.notice, .alert{
+  padding:0;
+  margin:0;
+  text-align: center;
+}
+
+div.field {
+  margin:10px;
+}
+
+div.divider{
+  height:2px;
+  border-top: 5px double #ec9;
+  border-bottom: 5px double #ec9;
+  border-radius:3px;
+}
+
+.hidden{
+  display: none;
+}

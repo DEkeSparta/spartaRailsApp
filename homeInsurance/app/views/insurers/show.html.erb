@@ -1,0 +1,7 @@
+<h1><%= @insurer.name %></h1>
+<h4><%= @insurer.slogan %></h4>
+<p>Has <%= @insurer.users.length %> customers</p>
+<p>Based in <%= @insurer.location %>.</p>
+
+<%= link_to 'Edit Insurer', edit_insurer_path(@insurer) %> |
+<%= link_to 'Back', insurers_path %>
