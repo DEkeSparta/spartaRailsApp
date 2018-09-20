@@ -1,4 +1,4 @@
-<%= form_with(model: insurer, local: true) do |form| %>
+<%= form_with(model: insurer, local: true) do |f| %>
   <% if insurer.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(insurer.errors.count, "error") %> prohibited this insurer from being saved:</h2>
@@ -11,7 +11,22 @@
     </div>
   <% end %>
 
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name, autocomplete: "name" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :slogan %><br />
+    <%= f.text_field :slogan, autocomplete: "slogan" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :location %><br />
+    <%= f.text_field :location, autocomplete: "location" %>
+  </div>
+
   <div class="actions">
-    <%= form.submit %>
+    <%= f.submit %>
   </div>
 <% end %>

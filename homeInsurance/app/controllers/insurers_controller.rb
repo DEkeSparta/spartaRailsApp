@@ -1,5 +1,6 @@
 class InsurersController < ApplicationController
   before_action :set_insurer, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only:[:show, :new, :edit, :create, :update, :destroy]
 
   # GET /insurers
   # GET /insurers.json
@@ -69,6 +70,6 @@ class InsurersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def insurer_params
-      params.fetch(:insurer, {})
+      params.require(:insurer).permit(:name, :slogan, :location)
     end
 end

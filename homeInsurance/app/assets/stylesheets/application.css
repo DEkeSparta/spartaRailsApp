@@ -29,6 +29,8 @@ td{
 }
 td.first{
   font-size: 1.5em;
+  width:50%;
+  font-weight: bold;
 }
 
 :link{
@@ -37,4 +39,26 @@ td.first{
 }
 :visited{
   color:#bdb;
+}
+:link:hover{
+  text-shadow: 1px 1px 5px #fff;
+}
+
+nav a{
+  padding:10px;
+  background-color:#333;
+}
+nav a:hover{
+  background-color: #888;
+}
+
+div.field {
+  margin:10px;
+}
+
+div.divider{
+  height:2px;
+  border-top: 5px double #ec9;
+  border-bottom: 5px double #ec9;
+  border-radius:3px;
 }
