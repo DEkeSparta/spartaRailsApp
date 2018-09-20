@@ -18,12 +18,12 @@
 
   <div class="field">
     <%= f.label :description %><br />
-    <%= f.text_field :description, autocomplete: "description" %>
+    <%= f.text_area :description, autocomplete: "description" %>
   </div>
 
   <div class="field">
     <%= f.label :value %> (£)<br />
-    <%= f.text_field :value, autocomplete: "value" %>
+    <%= f.number_field :value, autocomplete: "value" %>
   </div>
 
   <div class="field">
